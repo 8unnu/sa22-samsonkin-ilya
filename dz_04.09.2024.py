@@ -1,12 +1,10 @@
+from math import log2
+
 def task1(bytes, pages, strings, symbols):
     all_symbols = pages * strings * symbols
     bits = bytes * 8
     result = 2 ** (bits / all_symbols)  # <- в скобках объём информции 1 символа
     return int(result)
-
-
-from math import log2
-
 
 def task2(alf_power_one, alf_power_two):
     one_alf_symbol_weight = int(log2(alf_power_one))
@@ -17,7 +15,6 @@ def task2(alf_power_one, alf_power_two):
 def task3(alf_power, bits):
     one_symbol_weight = int(log2(alf_power))
     return int(bits / one_symbol_weight)
-
 
 def task4(white_bit, blue_used):
     blue_i = 1 / (2 ** white_bit)
